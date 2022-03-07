@@ -1,2 +1,2 @@
 #!/bin/bash
-sort < README.md 
+sort | uniq -u 

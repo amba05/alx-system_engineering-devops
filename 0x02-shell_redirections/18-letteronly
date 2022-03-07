@@ -1,0 +1,2 @@
+#!/bin/bash
+Ls etc/ssh/sshd_config

@@ -1,2 +1,2 @@
-#!/bin/basecho "best school" > 
-echo "best school" > \\\*\\\\\'\"Best\ School\"\\\'\\\\\*\$\\\?\\\*\\\*\\\*\\\*\\\*\:\)
+#!/bin/bash> 
+echo "Best school" > \\\*\\\\\'\"Best\ School\"\\\'\\\\\*\$\\\?\\\*\\\*\\\*\\\*\\\*\:\)

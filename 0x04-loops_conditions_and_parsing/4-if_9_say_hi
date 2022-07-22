@@ -3,9 +3,9 @@
 
 num=0
 
-while [ $num -lt 10 ];
+while [ $num -le 10 ];
 do
-	if [ $num != 8 ]
+	if [ $num != 9 ]
 	then
 		echo "Best School"
 	else

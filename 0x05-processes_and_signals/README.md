@@ -7,8 +7,9 @@
 - The second line of all your Bash scripts should be a comment explaining what is the script doing
 
 ## Resources
-- [Linux PID]()
-- [Linux process]()
-- [Linux signal]()
+- [Linux PID](http://www.linfo.org/pid.html)
+- [Linux process](https://www.thegeekstuff.com/2012/03/linux-processes-environment/)
+- [Linux signal](https://www.thegeekstuff.com/2012/03/linux-signals-fundamentals/)
+- [Linux Signals (SIGINT, SIGKILL, SIGSTOP, etc.)](https://www.thegeekstuff.com/2012/03/catch-signals-sample-c-code/)
 
 

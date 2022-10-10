@@ -5,24 +5,26 @@
 # Distribute requests using a roundrobin algorithm
 # Make sure that HAproxy can be managed via an init script
 
-# Enable a dedicated PPA with the following command:
-apt-get install -y --no-install-recommends software-properties-common
-add-apt-repository -y ppa:vbernat/haproxy-2.6
-apt-get -y update
 # Install HAproxy
-apt-get install -y haproxy=2.6.\*
+apt-get -y update
+apt-get install -y haproxy
 
 # Load balancing configuration
 printf %s "
 frontend http
     bind *:80
-    mode http
-    
+    mode http    
     default_backend web-backend
+
 backend web-backend
     balance roundrobin
+    option forwardfor
     server 6185-web-01 18.232.49.74:80 check
     server 6185-web-02 3.239.4.119:80 check
 " >> /etc/haproxy/haproxy.cfg
+
+printf %s "
+ENABLED=1
+" >> /etc/default/haproxy
 
 service haproxy restart

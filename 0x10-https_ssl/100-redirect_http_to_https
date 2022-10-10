@@ -33,14 +33,16 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend web-frontend
-	bind *:80
-	bind *:443 ssl crt /etc/ssl/certs/www.vabuka.tech.pem
-	mode http
-	http-request redirect scheme https code 301 unless { ssl_fc }
-	default_backend web-backend
+        #--rozaylee.tech-params-begin--
 
-backend web-backend
-	balance roundrobin
-	server web-01 	100.26.135.224:80 check
-	server web-02 	3.235.226.56:80 check
+listen  6185-lb-01
+        bind *:80
+        bind *:443 ssl crt /etc/letsencrypt/live/www.rozaylee.tech/www.rozaylee.tech.pem
+        mode http
+        redirect scheme https code 301 if !{ ssl_fc }
+        balance roundrobin
+        option forwardfor
+        server web-01   18.232.49.74:80 check
+        server web-02   3.239.4.119:80 check
+
+        #--rozaylee.tech-params-end--

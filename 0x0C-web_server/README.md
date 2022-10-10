@@ -2,6 +2,13 @@
 
 Project done during Full Stack Software Engineering studies at alx_Africa. It aims to learn about the roles of web servers and their processes (parent and child), and DNS roles.
 
+
+#Note
+**Code to transfer folders**
+`scp -ro StrictHostKeyChecking=no -i PRIV_KEY FILE USERNAME@IP_ADDRESS:~/`
+-r: means transfer folders. 
+
+
 ## Files
 
 | Filename                             | Description                                                             |
